@@ -64,8 +64,8 @@ int distributeTicket(int N, int K) {
         int j = N+1-K*right; // N+1 is used to get at last person that gets ticket
         if(step%2!=0){
             if(N%K==0)return i;
-            return i+1;
+            return i+1; // this because it means that less than k elements left and we are moving from right to left hence element right after i will be last
         }
         if(N%K==0)return j;
-        return j-1;
+        return j-1; // similar to return i+1
     }
