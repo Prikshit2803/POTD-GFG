@@ -53,3 +53,28 @@ public:
 	}
 
 };
+
+// another similar approach
+ 
+    int isDivisible(string s){
+        //complete the function here
+        int count = 0;
+        for(int i=s.size()-1;i>=0;i--){
+            if(i%2!=0)
+            {
+                if(s[i]=='1')
+                count = count + 1;
+            }
+            else
+            {
+                if(s[i] == '1')
+                count = count + 2;
+            }
+        }
+        
+        if(count%3 == 0)
+        return 1;
+        
+        else
+        return 0;
+    }
