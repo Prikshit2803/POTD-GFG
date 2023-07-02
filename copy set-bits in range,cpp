@@ -1,0 +1,19 @@
+class Solution{
+    public:
+    int setSetBit(int x, int y, int l, int r){
+        
+        for(int i=l;i<=r;i++){
+           
+            int temp=1<<i-1; //left-shifts bit-1 to i-1th position so that we can do '&' operation with y on that bit to find if i-1th bit of y is 1 or not
+            
+            if(temp & y) //if(temp & y==1) doesnt work as result in binary need not be 1
+            x=x|temp;  // this performs 'or' operation of x with temp where i-1 th bit is set
+            
+            
+            
+            
+        }
+        
+        return x;
+    }
+};
